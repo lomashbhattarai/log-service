@@ -10,7 +10,8 @@ const userSchema = mongoose.Schema({
 const NavigationSchema = mongoose.Schema({
     user:  userSchema ,
     to: { type: Object},
-    from: { type: Object}
+    from: { type: Object},
+    timeSpent: { type: Number }
 },{ timestamps: {}});
 
 module.exports = mongoose.model('Navigation',NavigationSchema);
